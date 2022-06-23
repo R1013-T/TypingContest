@@ -1,0 +1,18 @@
+<h1>Welcome</h1>
+
+<section class="user_deta">
+  <div class="name">
+    <p>名前:
+    <%= current_user.name %> </p>
+  </div>
+  <div class="email">
+    <p>メールアドレス:
+    <%= current_user.email %> </p>
+  </div>
+  <div class="speed">
+    <p>速度:
+    <%= current_user.speed %> </p>
+  </div>
+</section>
+
+<%= link_to "Logout", logout_path, method: :delete %>
