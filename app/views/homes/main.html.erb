@@ -1,3 +1,10 @@
+<% content_for :title do %>
+    タイピング大会
+<% end %>
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+<% end %>
+
 <h1>main</h1>
 <%= link_to "Sign up", new_user_path %>
 <%= link_to "Login", login_path %>
