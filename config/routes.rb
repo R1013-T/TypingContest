@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   get 'logout', to: "homes#top"
   delete 'logout', to: "homes#top"
+  get 'view', to: "users#index"
 end
