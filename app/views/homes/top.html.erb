@@ -1,16 +1,86 @@
 <% content_for :title do %>
     タイピング大会
 <% end %>
+<% content_for :font do %>
+    <link
+        href="https://fonts.googleapis.com/css?family=Teko"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap"
+        rel="stylesheet"
+    />
+<% end %>
 <% content_for :stylesheet do %>
-    <%= stylesheet_link_tag "top", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "home/top", :media => "all" %>
 <% end %>
 
-<h1>Hello</h1>
-
-<%= link_to 'START', main_path %>
+<header>
+    <a href="/">
+        <div class="headerTitle">
+            <div class="container"><h2>TECH.<span>C</span>.</h2></div>
+            <div class="container">
+                <h3>CREATORS FES</h3>
+                <p>20<span>22</span></p>
+            </div>
+        </div>
+    </a>
+</header>
+<main>
+    <section class="top">
+        <div class="center">
+            <div class="title">
+                <div class="logo">
+                    <div class="background">
+                        <video
+                            src="videos/12586598-preview.mp4"
+                            autoplay
+                            loop
+                            muted
+                        ></video>
+                        <div class="boxes">
+                        <div class="horizontal_gap_around"></div>
+                        <div class="vertical_gap_around"></div>
+                        <div class="top_left box"></div>
+                        <div class="vertical_gap"></div>
+                        <div class="top_center box"></div>
+                        <div class="vertical_gap"></div>
+                        <div class="top_right box"></div>
+                        <div class="vertical_gap_around"></div>
+                        <div class="horizontal_gap"></div>
+                        <div class="vertical_gap_around"></div>
+                        <div class="midol_left box"></div>
+                        <div class="vertical_gap"></div>
+                        <div class="midol_center box"></div>
+                        <div class="vertical_gap"></div>
+                        <div class="midol_right box"></div>
+                        <div class="vertical_gap_around"></div>
+                        <div class="horizontal_gap"></div>
+                        <div class="vertical_gap_around"></div>
+                        <div class="bottom_left box"></div>
+                        <div class="vertical_gap"></div>
+                        <div class="bottom_center box"></div>
+                        <div class="vertical_gap"></div>
+                        <div class="bottom_right box"></div>
+                        <div class="vertical_gap_around"></div>
+                        <div class="horizontal_gap_around"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center_logo">
+                <h2>
+                    Typing Contest<br />
+                    <a href="main"> START ! </a>
+                </h2>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="ranking">ranking</section>
+</main>
 <br>
-
-<%= link_to "Sign up", new_user_path %>
-<%= link_to "Login", login_path %>
-<br>
-<%= link_to "ViewAll", view_path %>
+<a href="view">allView</a>

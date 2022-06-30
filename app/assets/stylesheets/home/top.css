@@ -1,0 +1,225 @@
+/* A Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background: #77b1e7;
+}
+body header {
+  color: black;
+}
+body header .headerTitle {
+  color: rgb(255, 255, 255);
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: "Teko", sans-serif;
+  margin: 10px 0 0 100px;
+}
+body header .headerTitle .container {
+  text-align: right;
+}
+body header .headerTitle .container h2 {
+  font-size: 110px;
+  color: #333;
+  margin: 0 15px 0 0;
+}
+body header .headerTitle .container h2 span {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 90px;
+}
+body header .headerTitle .container h3 {
+  color: #fdfa8e;
+  font-size: 40px;
+  margin: 30px 0 0 0;
+}
+body header .headerTitle .container p {
+  font-size: 60px;
+  margin: -38px 0 0 0;
+}
+body header .headerTitle .container p span {
+  color: #fdfa8e;
+}
+body main .top .center {
+  width: 600px;
+  height: 600px;
+  margin: 10% auto;
+}
+body main .top .center .title {
+  margin: 0 auto;
+  position: relative;
+}
+body main .top .center .title .logo {
+  position: absolute;
+}
+body main .top .center .title .logo .background {
+  width: 600px;
+  height: 600px;
+  border-radius: 30px;
+  position: relative;
+}
+body main .top .center .title .logo .background video {
+  height: 590px;
+  width: 590px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 50px;
+  position: absolute;
+}
+body main .top .center .title .logo .background .boxes {
+  width: 600px;
+  height: 600px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+}
+body main .top .center .title .logo .background .boxes .horizontal_gap_around {
+  background: black;
+  width: 600px;
+  height: 42px;
+  border-radius: 0 0 30px 30px;
+  margin: -3px 0 0 0;
+}
+body main .top .center .title .logo .background .boxes .horizontal_gap_around:nth-child(1) {
+  border-radius: 30px 30px 0 0;
+  margin: 0 0 -3px 0;
+}
+body main .top .center .title .logo .background .boxes .vertical_gap_around {
+  background: black;
+  width: 42px;
+  height: 162px;
+}
+body main .top .center .title .logo .background .boxes .horizontal_gap {
+  background: black;
+  width: 600px;
+  height: 18px;
+}
+body main .top .center .title .logo .background .boxes .vertical_gap {
+  background: black;
+  width: 15px;
+  height: 162px;
+}
+body main .top .center .title .logo .background .boxes .box {
+  background: white;
+  width: 162px;
+  height: 162px;
+  opacity: 0.5;
+}
+body main .top .center .title .logo .background .boxes .midol_left {
+  background: black;
+}
+body main .top .center .title .logo .background .boxes .midol_center {
+  background: red;
+}
+body main .top .center .title .logo .background .boxes .midol_right {
+  background: black;
+}
+body main .top .center .title .logo .background .boxes .bottom_left {
+  background: black;
+}
+body main .top .center .title .logo .background .boxes .bottom_right {
+  background: black;
+}
+body main .top .center .title .center_title {
+  color: rgb(168, 230, 251);
+  display: flex;
+  position: absolute;
+  top: 6px;
+  left: 18px;
+  font-family: "Teko", sans-serif;
+}
+body main .top .center .title .center_title .container {
+  text-align: right;
+}
+body main .top .center .title .center_title .container h2 {
+  font-size: 90px;
+  color: #fff;
+  margin: 0 200px 0 0;
+}
+body main .top .center .title .center_title .container h2 span {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 76px;
+}
+body main .top .center .title .center_title .container h3 {
+  font-size: 40px;
+  margin: 23px 0 0 0;
+}
+body main .top .center .title .center_title .container p {
+  font-size: 70px;
+  margin: -38px 0 0 0;
+}
+body main .top .center .title .center_logo {
+  position: absolute;
+  width: 1100px;
+  top: 160px;
+  left: -220px;
+  font-size: 110px;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 15px 15px 0px 0 rgb(168, 230, 251);
+  padding: 0 5px 0 0;
+}
+body main .top .center .title .center_logo a {
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 80px;
+  margin: 0 0 0 -20px;
+  text-decoration: none;
+}
+body main .top .center .title .center_logo a:hover {
+  color: #f9f371;
+}
+body footer {
+  background: rgb(123, 194, 123);
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=top.css.map */

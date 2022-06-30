@@ -1,12 +1,11 @@
 class ApplicationController < ActionController::Base
-  
   helper_method :current_user
 
-  def login?
-    if current_user.nil?
-      redirect_to login_path, alert: "You have to log in."
-    end
-  end
+  # def login?
+  #   if current_user.nil?
+  #     redirect_to login_path, alert: "You have to log in."
+  #   end
+  # end
   
   # def already_login?
   #   unless current_user.nil?

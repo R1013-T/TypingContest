@@ -1,0 +1,26 @@
+<% content_for :title do %>
+    タイピング大会
+<% end %>
+<% content_for :font do %>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+    rel="stylesheet"
+  />
+<% end %>
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag "home/view", "data-turbo-track": "reload" %>
+<% end %>
+<% content_for :javascript do %>
+    <%= javascript_include_tag 'home/view', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<% @articles.each do |articles| %>
+  <ul>
+    <li>ID：<%= articles.id %></li>
+    <li>名前：<%= articles.name %></li>
+    <li>名前：<%= articles.email %></li>
+    <li>スピード：<%= articles.speed %></li>
+  </ul>
+<% end %>

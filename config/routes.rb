@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   root 'homes#top'
-  get 'main', to:"homes#main"
+  
   resource :user, only: [:new, :create, :show]
+
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
-  get 'logout', to: "homes#top"
-  delete 'logout', to: "homes#top"
-  get 'view', to: "users#index"
+  delete 'logout', to: "sessions#destroy"
+
+  get 'main', to: "homes#main"
+  get 'result', to: "homes#result"
+  get 'view', to: "homes#view"
+
+  get 'signin', to: "users#new"
+  get 'conf', to: "users#show"
 end

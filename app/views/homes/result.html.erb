@@ -1,0 +1,53 @@
+<% content_for :title do %>
+    タイピング大会
+<% end %>
+<% content_for :font do %>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+    rel="stylesheet"
+  />
+<% end %>
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag "home/result", "data-turbo-track": "reload" %>
+<% end %>
+<% content_for :javascript do %>
+    <%= javascript_include_tag 'home/result', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+    <div id="particles-js"></div>
+    <div id="wrapper">
+      <header>
+        <p>TECH.C. CreatorsFes 2022</p>
+      </header>
+      <article class="wrapper">
+        <section class="sign-up">
+          <div class="container">
+            <p class="title">Thanks for playing !</p>
+            <div class="result">
+              <p class="score">Your Speed : <strong id="js-speed">60</strong> s</p>
+              <p id="box2" class="box rank">
+                <span id="js-rank" class="count-down">5</span>
+                <span class="th">位</span>
+              </p>
+            </div>
+            <p class="sign_up">
+              登録して景品を受け取りましょう！ <br />
+              <a href="signin" class="btnlinestretches3" name="create"><span>登　録</span></a>
+            </p>
+          </div>
+        </section>
+        <section class="back">
+          <%= button_to '終了', {controller: 'homes', action: 'top'}, {class: 'btn04 back-button', name: 'onlySpeed', method: :get}%>
+        </section>
+      </article>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
