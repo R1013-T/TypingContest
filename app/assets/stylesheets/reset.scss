@@ -23,7 +23,7 @@ body {
 
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
+          text-decoration-skip-ink: auto;
 }
 
 img, picture {
@@ -42,11 +42,10 @@ input, button, textarea, select {
 
   *, *::before, *::after {
     -webkit-animation-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-/*# sourceMappingURL=reset.css.map *//*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */

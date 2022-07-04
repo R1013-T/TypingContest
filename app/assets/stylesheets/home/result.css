@@ -24,7 +24,7 @@ body {
 
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img, picture {
@@ -43,9 +43,9 @@ input, button, textarea, select {
 
   *, *::before, *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -73,13 +73,16 @@ input, button, textarea, select {
 body header {
   color: #77b1e7;
 }
+
 body .wrapper {
   width: 100%;
 }
+
 body .wrapper .sign-up {
   width: 100%;
   margin: 0 auto;
 }
+
 body .wrapper .sign-up .container {
   background: #77b1e7;
   width: 35%;
@@ -90,6 +93,7 @@ body .wrapper .sign-up .container {
   position: relative;
   margin: 10% auto 0;
 }
+
 body .wrapper .sign-up .container .title {
   background: #77b1e7;
   color: #eee;
@@ -103,25 +107,31 @@ body .wrapper .sign-up .container .title {
   text-align: center;
   font-family: "Staatliches", cursive;
 }
+
 body .wrapper .sign-up .container .result {
   margin: 40px 0 0 0;
   text-align: center;
 }
+
 body .wrapper .sign-up .container .result .score {
   font-size: 25px;
   color: #eee;
 }
+
 body .wrapper .sign-up .container .result .score strong {
   color: #fff;
 }
+
 body .wrapper .sign-up .container .result .rank {
   margin: 40px 0 0 0;
   font-size: 200px;
   font-weight: bold;
 }
+
 body .wrapper .sign-up .container .result .rank .th {
   font-size: 70px;
 }
+
 body .wrapper .sign-up .container .sign_up {
   text-align: center;
   color: #eee;
@@ -132,6 +142,7 @@ body .wrapper .sign-up .container .sign_up {
   /*線の設定*/
   /*線が伸びて背景に*/
 }
+
 body .wrapper .sign-up .container .sign_up .btnlinestretches3 {
   /*線の基点とするためrelativeを指定*/
   position: relative;
@@ -143,14 +154,17 @@ body .wrapper .sign-up .container .sign_up .btnlinestretches3 {
   outline: none;
   margin: 35px 0 0 0;
 }
+
 body .wrapper .sign-up .container .sign_up .btnlinestretches3 span {
   /*テキストを前面に出すためz-indexの値を高く設定*/
   position: relative;
   z-index: 2;
 }
+
 body .wrapper .sign-up .container .sign_up .btnlinestretches3:hover span {
   color: #fff;
 }
+
 body .wrapper .sign-up .container .sign_up .btnlinestretches3::after {
   content: "";
   /*絶対配置で線の位置を決める*/
@@ -165,9 +179,11 @@ body .wrapper .sign-up .container .sign_up .btnlinestretches3::after {
   /*アニメーションの指定*/
   transition: all 0.2s ease-in-out;
 }
+
 body .wrapper .sign-up .container .sign_up .btnlinestretches3:hover::after {
   height: 100%;
 }
+
 body .wrapper .back {
   /*hoverした際のボタンの形状*/
   /*線の設定*/
@@ -179,6 +195,7 @@ body .wrapper .back {
   /*背景の設定*/
   /*hoverをすると背景が伸びる*/
 }
+
 body .wrapper .back .btn04 {
   display: block;
   padding: 10px 30px;
@@ -192,9 +209,9 @@ body .wrapper .back .btn04 {
   margin: 30px auto;
   text-align: center;
   background: #77b1e7;
-
 }
+
 body .wrapper .back .btn04:hover {
   border: 2px solid #333;
   background: rgba(81, 111, 154, 0.4);
-}
+}/*# sourceMappingURL=result.css.map */

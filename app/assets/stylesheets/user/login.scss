@@ -2,76 +2,64 @@
 body {
   background: #77b1e7;
 }
-
 body header {
   color: black;
 }
-
 body header .headerTitle {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   display: flex;
   position: absolute;
   top: 20px;
   left: 20px;
   font-family: "Teko", sans-serif;
-  margin: 10px 0 0 100px;
+  margin: 10px 0 100px 100px;
 }
-
 body header .headerTitle .container {
   text-align: right;
 }
-
 body header .headerTitle .container h2 {
   font-size: 110px;
   color: #333;
   margin: 0 15px 0 0;
 }
-
 body header .headerTitle .container h2 span {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 90px;
 }
-
 body header .headerTitle .container h3 {
   color: #fdfa8e;
   font-size: 40px;
   margin: 30px 0 0 0;
 }
-
 body header .headerTitle .container p {
   font-size: 60px;
   margin: -38px 0 0 0;
 }
-
 body header .headerTitle .container p span {
   color: #fdfa8e;
 }
-
 body .form {
   background: rgba(255, 255, 255, 0.4);
-  width: 45%;
-  min-width: 400px;
-  max-width: 700px;
-  height: auto;
+  width: 50%;
+  min-width: 600px;
+  max-width: 900px;
   text-align: center;
   border: 2px solid #eee;
   border-radius: 10px;
-  margin: 200px auto;
+  margin: 300px auto;
 }
-
 body .form p {
   margin: 7% auto;
   color: #333;
+  font-size: 20px;
 }
-
 body .form p:first-child {
   margin: 60px 0 0 0;
 }
-
 body .form p input {
   display: inline-block;
   width: 60%;
-  height: 40px;
+  height: 50px;
   border: 1px solid #eee;
   border-radius: 5px;
   background: #77b1e7;
@@ -96,7 +84,7 @@ canvas {
 
 .btn {
   width: 40%;
-  height: 30px;
+  height: 60px;
   /*アニメーションの起点とするためrelativeを指定*/
   position: relative;
   overflow: hidden;
@@ -117,18 +105,21 @@ canvas {
 }
 
 /*ボタン内spanの形状*/
-.btn span {
+.btn input {
   position: relative;
   z-index: 3;
   /*z-indexの数値をあげて文字を背景よりも手前に表示*/
   color: #000000;
+  border: none;
+  background: none;
+  font-size: 22px;
 }
 
 .btn:hover {
   border: 1px solid #333;
 }
 
-.btn:hover span {
+.btn:hover input {
   color: #fff;
 }
 
@@ -161,6 +152,34 @@ canvas {
   margin: 30px 0 0 0;
   font-size: 40px;
   color: #333;
+}/*# sourceMappingURL=sign_up_form.css.map */
+
+.btn span {
+  position: relative;
+  z-index: 3;
+  /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #000000;
+  border: none;
+  background: none;
+  font-size: 20px;
+  padding: 3px 0 0 0;
 }
 
-/*# sourceMappingURL=sign_up_form.css.map *//*# sourceMappingURL=conf.css.map */
+.btn:hover span {
+  color: #fff;
+}
+
+.confButton {
+  line-height: 35px;
+}
+
+.signup {
+  display: block;
+  margin: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}

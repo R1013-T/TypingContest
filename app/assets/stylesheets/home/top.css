@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -23,7 +22,7 @@ body {
 
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img, picture {
@@ -42,9 +41,9 @@ input, button, textarea, select {
 
   *, *::before, *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -52,9 +51,11 @@ input, button, textarea, select {
 body {
   background: #77b1e7;
 }
+
 body header {
   color: black;
 }
+
 body header .headerTitle {
   color: rgb(255, 255, 255);
   display: flex;
@@ -64,56 +65,68 @@ body header .headerTitle {
   font-family: "Teko", sans-serif;
   margin: 10px 0 0 100px;
 }
+
 body header .headerTitle .container {
   text-align: right;
 }
+
 body header .headerTitle .container h2 {
   font-size: 110px;
   color: #333;
   margin: 0 15px 0 0;
 }
+
 body header .headerTitle .container h2 span {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 90px;
 }
+
 body header .headerTitle .container h3 {
   color: #fdfa8e;
   font-size: 40px;
   margin: 30px 0 0 0;
 }
+
 body header .headerTitle .container p {
   font-size: 60px;
   margin: -38px 0 0 0;
 }
+
 body header .headerTitle .container p span {
   color: #fdfa8e;
 }
+
 body main .top .center {
   width: 600px;
   height: 600px;
   margin: 10% auto;
 }
+
 body main .top .center .title {
   margin: 0 auto;
   position: relative;
 }
+
 body main .top .center .title .logo {
   position: absolute;
 }
+
 body main .top .center .title .logo .background {
   width: 600px;
   height: 600px;
   border-radius: 30px;
   position: relative;
 }
+
 body main .top .center .title .logo .background video {
   height: 590px;
   width: 590px;
   -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
   border-radius: 50px;
   position: absolute;
 }
+
 body main .top .center .title .logo .background .boxes {
   width: 600px;
   height: 600px;
@@ -122,6 +135,7 @@ body main .top .center .title .logo .background .boxes {
   flex-wrap: wrap;
   position: absolute;
 }
+
 body main .top .center .title .logo .background .boxes .horizontal_gap_around {
   background: black;
   width: 600px;
@@ -129,46 +143,57 @@ body main .top .center .title .logo .background .boxes .horizontal_gap_around {
   border-radius: 0 0 30px 30px;
   margin: -3px 0 0 0;
 }
+
 body main .top .center .title .logo .background .boxes .horizontal_gap_around:nth-child(1) {
   border-radius: 30px 30px 0 0;
   margin: 0 0 -3px 0;
 }
+
 body main .top .center .title .logo .background .boxes .vertical_gap_around {
   background: black;
   width: 42px;
   height: 162px;
 }
+
 body main .top .center .title .logo .background .boxes .horizontal_gap {
   background: black;
   width: 600px;
   height: 18px;
 }
+
 body main .top .center .title .logo .background .boxes .vertical_gap {
   background: black;
   width: 15px;
   height: 162px;
 }
+
 body main .top .center .title .logo .background .boxes .box {
   background: white;
   width: 162px;
   height: 162px;
   opacity: 0.5;
 }
+
 body main .top .center .title .logo .background .boxes .midol_left {
   background: black;
 }
+
 body main .top .center .title .logo .background .boxes .midol_center {
   background: red;
 }
+
 body main .top .center .title .logo .background .boxes .midol_right {
   background: black;
 }
+
 body main .top .center .title .logo .background .boxes .bottom_left {
   background: black;
 }
+
 body main .top .center .title .logo .background .boxes .bottom_right {
   background: black;
 }
+
 body main .top .center .title .center_title {
   color: rgb(168, 230, 251);
   display: flex;
@@ -177,26 +202,32 @@ body main .top .center .title .center_title {
   left: 18px;
   font-family: "Teko", sans-serif;
 }
+
 body main .top .center .title .center_title .container {
   text-align: right;
 }
+
 body main .top .center .title .center_title .container h2 {
   font-size: 90px;
   color: #fff;
   margin: 0 200px 0 0;
 }
+
 body main .top .center .title .center_title .container h2 span {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 76px;
 }
+
 body main .top .center .title .center_title .container h3 {
   font-size: 40px;
   margin: 23px 0 0 0;
 }
+
 body main .top .center .title .center_title .container p {
   font-size: 70px;
   margin: -38px 0 0 0;
 }
+
 body main .top .center .title .center_logo {
   position: absolute;
   width: 1100px;
@@ -208,6 +239,7 @@ body main .top .center .title .center_logo {
   box-shadow: 15px 15px 0px 0 rgb(168, 230, 251);
   padding: 0 5px 0 0;
 }
+
 body main .top .center .title .center_logo a {
   text-align: center;
   color: #fff;
@@ -216,6 +248,7 @@ body main .top .center .title .center_logo a {
   margin: 0 0 0 -20px;
   text-decoration: none;
 }
+
 body main .top .center .title .center_logo a:hover {
   color: #f9f371;
 }
@@ -238,39 +271,45 @@ body main .top .center .title .center_logo a:hover {
   font-weight: 600;
   font-size: 23px;
   text-decoration: none;
-  font-family: 'Sawarabi Gothic', sans-serif;
+  font-family: "Sawarabi Gothic", sans-serif;
   background: rgba(0, 0, 0, 0.5);
 }
+
 .view a:before,
 .view a:after {
-content: '';
-width: 18px;
-height: 18px;
-border-color: #000;
-box-sizing: border-box;
-border-style :solid;
-display: block;
-position: absolute;
-transition: all 0.3s ease-in-out;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-color: #000;
+  box-sizing: border-box;
+  border-style: solid;
+  display: block;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
 }
+
 .view a:before {
-top: -6px;
-left: -6px;
-border-width: 2px 0 0 2px;
-z-index: 5;}
-.view a:after {
-bottom: -6px;
-right: -6px;
-border-width: 0 2px 2px 0;
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+  z-index: 5;
 }
+
+.view a:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+
 .view a:hover:before,
 .view a:hover:after {
-width: calc(100% + 12px);
-height: calc(100% + 12px);
-border-color: #fff;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #fff;
 }
+
 .view a:hover {
-color: #0080ff;
-background-color: #fff;
-border-color: #fff;
-}
+  color: #0080ff;
+  background-color: #fff;
+  border-color: #fff;
+}/*# sourceMappingURL=top.css.map */
