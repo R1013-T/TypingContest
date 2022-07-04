@@ -6,7 +6,17 @@ class SessionsController < ApplicationController
     def create
       user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
+        @score =  session[:score]
+
+        print "\n login"
+        print "\n" +  @score + " \n\n"
+
+        #todo userのスコアを更新する
+        user.update(speed: @score)
+
         session[:user_id] = user.id
+        session[:user_speed] = user.speed
+
         redirect_to user_path, notice: "You have successfully logged in."
       else
         flash.now[:alert] = "Email or Password is invalid."

@@ -10,6 +10,9 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
+      session[:user_name] = user.name
+      session[:user_email] = user.email
+      session[:user_speed] = user.speed
       redirect_to user_path, notice: "You have successfully signed in."
     else
       render :new
@@ -17,6 +20,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @name = session[:user_name]
+    @email = session[:user_email]
+    @score = session[:user_speed]
   end
 
   private

@@ -3,6 +3,21 @@ class HomesController < ApplicationController
     puts "top"
     if params[:onlySpeed]
       puts "onlySpeed"
+      crtScore = session[:score]
+      print crtScore
+      #todo スピードだけデータベースに保存する処理
+
+      user = User.new
+
+      time = (Time.now).to_s
+
+      user.name = "NoName"
+      user.email =  time + ".gmail.com"
+      user.password = "123456"
+      user.password_confirmation = "123456"
+      user.speed = crtScore
+      
+      user.save
 
     end
   end
@@ -14,16 +29,18 @@ class HomesController < ApplicationController
 
     speeds = []
     @articles.each do |spd|
-      print(spd.speed, "\n")
+      # print(spd.speed, "\n")
       speeds.push(spd.speed)
     end
-
-    print speeds
+    # print speeds
     @js_speeds_json = speeds.to_json.html_safe
 
   end
   def result
-
+    @score = params[:score]
+    print("\n","score:",@score,"\n\n")
+    session[:score] = @score
+    
   end
   def view
     @articles = orderUser

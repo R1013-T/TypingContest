@@ -1,18 +1,60 @@
-<h1>Login</h1>
-
-<%= form_with url: login_path, local: true do |f| %>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-
-  <div>
-    <%= f.submit "Login" %>
-  </div>
-  <%= link_to "Sign up", new_user_path %>
+<% content_for :title do %>
+    タイピング大会
 <% end %>
+<% content_for :font do %>
+  <link
+      href="https://fonts.googleapis.com/css?family=Teko"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap"
+      rel="stylesheet"
+    />
+<% end %>
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag "user/login", "data-turbo-track": "reload" %>
+<% end %>
+<% content_for :javascript do %>
+    <%= javascript_include_tag 'user/login', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<header>
+    <a href="/">
+      <div class="headerTitle">
+        <div class="container"><h2>TECH.<span>C</span>.</h2></div>
+        <div class="container">
+            <h3>CREATORS FES</h3>
+            <p>20<span>22</span></p>
+        </div>
+      </div>
+    </a>
+</header>
+
+    <div class="wave">
+      <article class="form">
+
+        <%= form_with url: login_path, local: true do |f| %>
+          <p class="field">
+            <br>
+            メールアドレス <br>
+            <%= f.text_field :email %>
+          </p>
+
+          <p class="field">
+            パスワード<br>
+            <%= f.password_field :password %>
+          </p>
+
+          <div>
+            <%= f.submit "ログイン", class: "btn", id: "js-button" %>
+          </div>
+          <%= link_to "新規登録", new_user_path, class: "signup" %>
+        <% end %>
+        
+      </article>
+      <canvas id="waveCanvas"></canvas>
+    </div>

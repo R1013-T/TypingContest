@@ -173,3 +173,14 @@ canvas {
 .confButton {
   line-height: 35px;
 }
+
+.login{
+  display: block;
+  margin: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.login:hover {
+  text-decoration: underline;
+}

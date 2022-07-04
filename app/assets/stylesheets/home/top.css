@@ -1,4 +1,5 @@
-/* A Modern CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -16,7 +17,6 @@ html:focus-within {
 }
 
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -219,7 +219,58 @@ body main .top .center .title .center_logo a {
 body main .top .center .title .center_logo a:hover {
   color: #f9f371;
 }
-body footer {
-  background: rgb(123, 194, 123);
-  color: rgb(255, 255, 255);
-}/*# sourceMappingURL=top.css.map */
+
+.view {
+  text-align: center;
+  margin: -8% 0 0 0;
+}
+
+.view a {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 10px 25px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 23px;
+  text-decoration: none;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+}
+.view a:before,
+.view a:after {
+content: '';
+width: 18px;
+height: 18px;
+border-color: #000;
+box-sizing: border-box;
+border-style :solid;
+display: block;
+position: absolute;
+transition: all 0.3s ease-in-out;
+}
+.view a:before {
+top: -6px;
+left: -6px;
+border-width: 2px 0 0 2px;
+z-index: 5;}
+.view a:after {
+bottom: -6px;
+right: -6px;
+border-width: 0 2px 2px 0;
+}
+.view a:hover:before,
+.view a:hover:after {
+width: calc(100% + 12px);
+height: calc(100% + 12px);
+border-color: #fff;
+}
+.view a:hover {
+color: #0080ff;
+background-color: #fff;
+border-color: #fff;
+}

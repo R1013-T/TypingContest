@@ -5,42 +5,68 @@ let $nextButton = document.getElementById("js-button");
 
 let $speedsAryJson = document.getElementById("js_speeds_json").value;
 
-let rank = 0;
+let untilSpeeds = [];
+let speed;
+let rank;
 
-console.log($speedsAryJson);
-console.log($speedsAryJson.length);
-
-formatOfRailsAry("abcdef");
-
-
-
-// console.log(speedsAry[0]);
-// console.log(speedsAry[1]);
-// console.log(speedsAry[2]);
-// console.log(speedsAry[3]);
-// console.log(speedsAry[4]);
-// console.log(speedsAry[5]);
-// console.log(speedsAry[6]);
+//? Railsから持ってきた文字列を配列に変換
+//? return untilSpeeds
+formatOfRailsAry($speedsAryJson);
 
 $nextButton.addEventListener("click", () => {
+  rank = 1;
+  speed = $speed.value;
 
+  //? 今回のスピードを比べて順位を出す
+  //? return rank
+  searchRank();
 
+  window.sessionStorage.setItem(["speed"], [speed]);
+  window.sessionStorage.setItem(["rank"], [rank]);
 
-  window.sessionStorage.setItem(["speed"], [$speed.value]);
   window.location.href = "result";
 });
 
+
 function formatOfRailsAry(ary) {
-  let index = 0;
+  var index = 0;
   let length = ary.length;
-  let tmp;
-  let speedAry = [];
+  var tmp;
+  var tmpBox;
+  var speedAry = [];
 
-  // 文字数分繰り返し
+  while (index <= length) {
+    tmp = ary[index];
+    // console.log("tmp : " + tmp);
+    //todo switch文でやりたい
+    if ( tmp == "[" || tmp == "]" ) {
+      if (tmp == "]") {
+        speedAry.push(Number(tmpBox));
+      }
+    } else if ( tmp == "," ){
+      speedAry.push(Number(tmpBox));
+      tmpBox = "";
+    } else {
+      if (tmpBox == undefined) {
+        tmpBox = tmp;
+      } else {
+        tmpBox += tmp;
+      }
+    }
+    index++;
+  }
+  untilSpeeds = speedAry;
+}
 
-  // 数字をtmpに切り出す
+function searchRank() {
+  let length = untilSpeeds.length;
+  let crtSpeed = $speed.value;
+  var index = 0;
 
-  // speedAryに追加していく
-
-  console.log(index + " " + ary + " " + length);
+  while (index < length) {
+    if ( crtSpeed >= untilSpeeds[index] ){
+      rank ++;
+    }
+    index++;
+  }
 }

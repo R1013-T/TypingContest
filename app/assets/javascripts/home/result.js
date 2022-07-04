@@ -124,10 +124,26 @@ $("#box2").on("inview", function (event, isInView) {
 console.log("result");
 
 let speed = window.sessionStorage.getItem(['speed']);
+let rank = window.sessionStorage.getItem(['rank']);
 console.log(speed);
+console.log(rank);
 
 let $speed = document.getElementById("js-speed");
 let $rank = document.getElementById("js-rank");
 
 $speed.textContent = speed;
-$rank.textContent = 3;
+$rank.textContent = rank;
+
+$(function(){
+  var score = speed;
+//  localStorageを用いて他のファイルの変数を持ってきてgamescoreへ代入しています。
+  $.ajax({
+    url: 'result',  
+    type: 'GET',
+    dataType: 'html',
+    async: true,
+    data: {
+      score: score,
+    },
+  });
+});

@@ -2,12 +2,18 @@
     タイピング大会
 <% end %>
 <% content_for :font do %>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
-    rel="stylesheet"
-  />
+      <link
+      href="https://fonts.googleapis.com/css?family=Teko"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap"
+      rel="stylesheet"
+    />
 <% end %>
 <% content_for :stylesheet do %>
     <%= stylesheet_link_tag "home/view", "data-turbo-track": "reload" %>
@@ -16,11 +22,46 @@
     <%= javascript_include_tag 'home/view', 'data-turbolinks-track': 'reload' %>
 <% end %>
 
-<% @articles.each do |articles| %>
-  <ul>
-    <li>ID：<%= articles.id %></li>
-    <li>名前：<%= articles.name %></li>
-    <li>名前：<%= articles.email %></li>
-    <li>スピード：<%= articles.speed %></li>
-  </ul>
+<header>
+    <a href="/">
+      <div class="headerTitle">
+        <div class="container"><h2>TECH.<span>C</span>.</h2></div>
+        <div class="container">
+            <h3>CREATORS FES</h3>
+            <p>20<span>22</span></p>
+        </div>
+      </div>
+    </a>
+</header>
+
+<article class="ranking">
+  <div class="rank_head">
+    <div class="rank">ランク</div>
+    <div class="name">名前</div>
+    <div class="score">スコア</div>
+    <div class="gift">景品</div>
+  </div>
+
+  <div id="js-container">
+  
+  <% @articles.each do |articles| %>
+
+  <section class="container">
+    <div class="back">
+      <div class="back-color"></div>
+      <div class="back-black"></div>
+      <div class="text">
+        <div class="rank">4</div>
+        <div class="name"><%= articles.name %></div>
+        <div class="score"><%= articles.speed %></div>
+        <div class="gift">Lorem</div>
+      </div>
+    </div>
+  </section>
 <% end %>
+
+  </div>
+
+
+
+</article>
