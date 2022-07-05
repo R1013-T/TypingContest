@@ -105,7 +105,7 @@ init();
 
 // let $nameField = document.getElementById("js-name");
 // let $emailField = document.getElementById("js-email");
-let $scoreField = document.getElementById("js-score");
+var $scoreField = document.getElementById("js-score");
 // let $sendButton = document.getElementById("js-button");
 
 let score = window.sessionStorage.getItem(['speed']);
