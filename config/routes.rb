@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'result', to: "homes#result"
   get 'view', to: "homes#view"
 
+  post 'result', to: "home#result"
+
   get 'signin', to: "users#new"
   get 'conf', to: "users#show"
 end

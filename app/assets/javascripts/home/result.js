@@ -140,7 +140,7 @@ $(function(){
   var score = speed;
   $.ajax({
     url: 'result',  
-    type: 'GET',
+    type: 'POST',
     dataType: 'html',
     async: true,
     data: {
