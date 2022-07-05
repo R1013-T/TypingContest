@@ -24,6 +24,9 @@ $nextButton.addEventListener("click", () => {
   window.sessionStorage.setItem(["speed"], [speed]);
   window.sessionStorage.setItem(["rank"], [rank]);
 
+  console.log(speed);
+  console.log(rank);
+
   window.location.href = "result";
 });
 
