@@ -15,8 +15,7 @@ class UsersController < ApplicationController
       session[:user_speed] = user.speed
       redirect_to user_path, notice: "You have successfully signed in."
     else
-      # render :new
-      return
+      redirect_back(fallback_location: new_user_path)
     end
   end
 
