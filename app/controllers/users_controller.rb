@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       redirect_to user_path, notice: "You have successfully signed in."
     else
       # render :new
-      exit
+      return
     end
   end
 
