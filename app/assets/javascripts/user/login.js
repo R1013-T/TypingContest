@@ -111,3 +111,6 @@ let $scoreField = document.getElementById("js-score");
 let score = window.sessionStorage.getItem(['speed']);
 
 $scoreField.value = score;
+
+console.log($scoreField);
+console.log(score);
