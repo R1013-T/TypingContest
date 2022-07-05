@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     def create
       user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
-        @score =  70
+        @score =  params[:speed]
 
         #todo userのスコアを更新する
         user.update(speed: @score)
