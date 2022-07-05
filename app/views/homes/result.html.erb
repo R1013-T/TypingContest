@@ -41,6 +41,14 @@
         <section class="back">
           <%= button_to '終了', {controller: 'homes', action: 'top'}, {class: 'btn04 back-button', name: 'onlySpeed', method: :get}%>
         </section>
+
+        <%= form_with url: root_path, local: true do |f| %>
+          <%= f.number_field :speed, id: "js-score" %>
+          <div>
+          <%= f.submit "back", class: "btn04 back-button", id: "js-button" %>
+          </div>
+        <% end %>
+
       </article>
     </div>
 
