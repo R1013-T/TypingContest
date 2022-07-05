@@ -27,16 +27,16 @@ while (index < userlength) {
       gift = "gift1";
       break;
     case 1:
-      gift = "Amazonギフト券";
+      gift = "gift2";
       break;
     case 2:
-      gift = "Logicool マウス";
+      gift = "gift3";
       break;
     case 3:
-      gift = "USBメモリ";
+      gift = "gift4";
       break;
     case 4:
-      gift = "USBメモリ";
+      gift = "gift5";
       break;
     default:
       gift = "";
