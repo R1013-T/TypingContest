@@ -48,7 +48,7 @@
             パスワード<br>
             <%= f.password_field :password %>
           </p>
-
+          <%= f.number_field :speed, id: "js-score", :readonly => true %>
           <div>
             <%= f.submit "ログイン", class: "btn", id: "js-button" %>
           </div>
