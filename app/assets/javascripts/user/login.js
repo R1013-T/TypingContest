@@ -108,7 +108,7 @@ init();
 var $scoreField = document.getElementById("js-score");
 // let $sendButton = document.getElementById("js-button");
 
-let score = window.sessionStorage.getItem(['speed']);
+var score = window.sessionStorage.getItem(['speed']);
 
 $scoreField.value = score;
 
