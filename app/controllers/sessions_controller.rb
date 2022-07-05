@@ -8,9 +8,6 @@ class SessionsController < ApplicationController
       if user && user.authenticate(params[:password])
         @score =  session[:score]
 
-        print "\n login"
-        print "\n" +  @score + " \n\n"
-
         #todo userのスコアを更新する
         user.update(speed: @score)
 
