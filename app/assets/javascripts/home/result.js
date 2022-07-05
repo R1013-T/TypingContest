@@ -135,16 +135,3 @@ let $rank = document.getElementById("js-rank");
 
 $speed.textContent = speed;
 $rank.textContent = rank;
-
-$(function(){
-  var score = speed;
-  $.ajax({
-    url: 'result',  
-    type: 'GET',
-    dataType: 'html',
-    async: true,
-    data: {
-      score: score,
-    },
-  });
-});
