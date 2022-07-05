@@ -29,16 +29,13 @@ class HomesController < ApplicationController
 
     speeds = []
     @articles.each do |spd|
-      # print(spd.speed, "\n")
       speeds.push(spd.speed)
     end
-    # print speeds
     @js_speeds_json = speeds.to_json.html_safe
 
   end
   def result
     @score = params[:score]
-    print("\n","score:",@score,"\n\n")
     session[:score] = @score
     
   end

@@ -1,3 +1,5 @@
+console.log("view:signup");
+
 var unit = 100,
   canvasList, // キャンバスの配列
   info = {}, // 全キャンバス共通の描画情報
