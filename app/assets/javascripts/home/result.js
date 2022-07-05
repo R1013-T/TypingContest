@@ -1,3 +1,5 @@
+console.log("view:result");
+
 particlesJS("particles-js",{
 	"particles":{
 		"number":{

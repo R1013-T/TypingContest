@@ -1,4 +1,4 @@
-console.log("main");
+console.log("view:main");
 
 let $speed = document.getElementById("js-speed");
 let $nextButton = document.getElementById("js-button");
