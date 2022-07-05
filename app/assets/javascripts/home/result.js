@@ -123,12 +123,8 @@ $("#box2").on("inview", function (event, isInView) {
   }
 });
 
-console.log("result");
-
 let speed = window.sessionStorage.getItem(['speed']);
 let rank = window.sessionStorage.getItem(['rank']);
-console.log(speed);
-console.log(rank);
 
 let $speed = document.getElementById("js-speed");
 let $rank = document.getElementById("js-rank");

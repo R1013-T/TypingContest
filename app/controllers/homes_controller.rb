@@ -2,13 +2,9 @@ class HomesController < ApplicationController
   def top
     puts "top"
     if params[:onlySpeed]
-      puts "onlySpeed"
+
       crtScore = session[:score]
-      print crtScore
-      #todo スピードだけデータベースに保存する処理
-
       user = User.new
-
       time = (Time.now).to_s
 
       user.name = "NoName"
@@ -35,8 +31,8 @@ class HomesController < ApplicationController
 
   end
   def result
-    @score = params[:score]
-    session[:score] = @score
+    # @score = params[:score]
+    # session[:score] = @score
     
   end
   def view
