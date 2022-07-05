@@ -138,7 +138,6 @@ $rank.textContent = rank;
 
 $(function(){
   var score = speed;
-//  localStorageを用いて他のファイルの変数を持ってきてgamescoreへ代入しています。
   $.ajax({
     url: 'result',  
     type: 'GET',

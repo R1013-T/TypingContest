@@ -27,6 +27,19 @@ $nextButton.addEventListener("click", () => {
   console.log(speed);
   console.log(rank);
 
+  $(function(){
+    var score = speed;
+    $.ajax({
+      url: 'main',  
+      type: 'GET',
+      dataType: 'html',
+      async: true,
+      data: {
+        speedScore: score,
+      },
+    });
+  });
+
   window.location.href = "result";
 });
 

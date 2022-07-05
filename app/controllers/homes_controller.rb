@@ -33,6 +33,9 @@ class HomesController < ApplicationController
     end
     @js_speeds_json = speeds.to_json.html_safe
 
+    @speedScore = params[:score]
+    session[:score] = @speedScore
+
   end
   def result
     @score = params[:score]
