@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         session[:user_speed] = user.speed
 
-        redirect_to user_path, notice: "You have successfully logged in."
+        # redirect_to user_path, notice: "You have successfully logged in."
       else
         flash.now[:alert] = "Email or Password is invalid."
         render :new
