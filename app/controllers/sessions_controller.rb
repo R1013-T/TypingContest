@@ -6,10 +6,10 @@ class SessionsController < ApplicationController
     def create
       user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
-        # @score =  user_params[:speed]
+        @score =  70
 
         #todo userのスコアを更新する
-        # user.update(speed: @score)
+        user.update(speed: @score)
 
         session[:user_id] = user.id
         session[:user_speed] = user.speed
@@ -24,10 +24,5 @@ class SessionsController < ApplicationController
     def destroy
       session[:user_id] = nil
       redirect_to root_path, notice: "You have seccessfully logged out."
-    end
-
-    private
-    def user_params
-      params.require(:user).permit(:speed)
     end
 end
