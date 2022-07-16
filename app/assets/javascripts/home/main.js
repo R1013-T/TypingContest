@@ -13,23 +13,19 @@ let rank;
 //? return untilSpeeds
 formatOfRailsAry($speedsAryJson);
 
-$nextButton.addEventListener("click", () => {
-  rank = 1;
-  speed = $speed.value;
+// $nextButton.addEventListener("click", () => {
+//   rank = 1;
+//   speed = Number($speed.textContent);
 
-  //? 今回のスピードを比べて順位を出す
-  //? return rank
-  searchRank();
+//   //? 今回のスピードを比べて順位を出す
+//   //? return rank
+//   searchRank();
 
-  window.sessionStorage.setItem(["speed"], [speed]);
-  window.sessionStorage.setItem(["rank"], [rank]);
+//   window.sessionStorage.setItem(["speed"], [speed]);
+//   window.sessionStorage.setItem(["rank"], [rank]);
 
-  console.log(speed);
-  console.log(rank);
-
-  window.location.href = "result";
-});
-
+//   window.location.href = "result";
+// });
 
 function formatOfRailsAry(ary) {
   var index = 0;
@@ -42,11 +38,11 @@ function formatOfRailsAry(ary) {
     tmp = ary[index];
     // console.log("tmp : " + tmp);
     //todo switch文でやりたい
-    if ( tmp == "[" || tmp == "]" ) {
+    if (tmp == "[" || tmp == "]") {
       if (tmp == "]") {
         speedAry.push(Number(tmpBox));
       }
-    } else if ( tmp == "," ){
+    } else if (tmp == ",") {
       speedAry.push(Number(tmpBox));
       tmpBox = "";
     } else {
@@ -63,13 +59,145 @@ function formatOfRailsAry(ary) {
 
 function searchRank() {
   let length = untilSpeeds.length;
-  let crtSpeed = $speed.value;
+  let crtSpeed = $speed.textContent;
   var index = 0;
 
   while (index < length) {
-    if ( crtSpeed >= untilSpeeds[index] ){
-      rank ++;
+    if (crtSpeed >= untilSpeeds[index]) {
+      rank++;
     }
     index++;
   }
 }
+
+new Vue({
+  el: "#app",
+  data: {
+    startFlg: "",
+    countFlg: "",
+    current_question: "",
+    questions: [
+      "join",
+      // "load",
+      // "host",
+      // "from",
+      // "fetch",
+      // "build",
+      // "export",
+      // "accept",
+      // "create",
+      // "remove",
+      // "dedupe",
+      // "connect",
+      // "register",
+      // "separate",
+      // "identifier",
+    ],
+    typeBox: "",
+    current_question_counts: 0,
+    question_counts: 0,
+
+    keyCode: null,
+
+    active: false, // 実行状態
+    start: 0, // startを押した時刻
+    timer: 0, // setInterval()の格納用
+    interval: 0, // 計測時間
+    accum: 0, // 累積時間(stopしたとき用)
+  },
+  computed: {
+    styleObject: function () {
+      width = (this.current_question_counts / this.question_counts) * 100 + "%";
+      if (this.current_question_counts >= this.question_counts) {
+        color = "#77b1e7";
+      } else {
+        color = "#cdeeff";
+      }
+      return {
+        width: width,
+        background: color,
+      };
+    },
+  },
+  methods: {
+    gameStart: function () {
+      if (!this.startFlg) {
+        this.countFlg = true;
+        this.startFlg = true;
+
+        setTimeout(() => {
+          this.countFlg = false;
+          this.$nextTick(function () {
+            document.getElementById("typeForm").focus();
+          });
+
+          console.log('start');
+          this.startTimer();
+        }, 4000);
+      }
+    },
+    onKeyDown(event) {
+      if (event.keyCode == 32) {
+        this.gameStart();
+      }
+    },
+    startTimer() {
+      this.active = true;
+      this.start = Date.now();
+      this.timer = setInterval(() => {
+        this.interval = this.accum + (Date.now() - this.start) * 0.001;
+      }, 10); // 10msごとに現在時刻とstartを押した時刻の差を足す
+    },
+    stopTimer() {
+      $speed.textContent = this.interval.toFixed(0);
+      this.active = false;
+      this.accum = this.interval;
+      clearInterval(this.timer);
+    },
+    resetTimer() {
+      this.interval = 0;
+      this.accum = 0;
+      this.start = Date.now();
+    },
+  },
+  mounted: function () {
+    this.current_question = this.questions[0];
+    this.question_counts = this.questions.length;
+
+    document.addEventListener("keydown", this.onKeyDown);
+  },
+  beforeDestroy: function () {
+    document.removeEventListener("keydown", this.onKeyDown);
+  },
+  watch: {
+    typeBox: function (e) {
+      if (e == this.current_question) {
+        setTimeout(() => {
+          this.questions.splice(0, 1);
+          this.current_question = this.questions[0];
+          this.typeBox = "";
+          this.current_question_counts = this.current_question_counts + 1;
+        }, 150);
+      } else if (e == " " || e == "　") {
+        this.typeBox = "";
+      }
+      if (this.current_question_counts >= this.question_counts) {
+        console.log('finish');
+        this.stopTimer();
+        rank = 1;
+        speed = Number($speed.textContent);
+      
+        // //? 今回のスピードを比べて順位を出す
+        // //? return rank
+        searchRank();
+      
+        window.sessionStorage.setItem(["speed"], [speed]);
+        window.sessionStorage.setItem(["rank"], [rank]);
+      
+        window.location.href = "result";
+      }
+    },
+  },
+});
+
+//!

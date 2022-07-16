@@ -3,13 +3,12 @@
 <% end %>
 <% content_for :stylesheet do %>
     <%= stylesheet_link_tag "home/main", "data-turbo-track": "reload" %>
-<% end %>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script><% end %>
 <% content_for :javascript do %>
     <%= javascript_include_tag 'home/main', 'data-turbolinks-track': 'reload' %>
 <% end %>
 
-<div class="container" style="margin: 50px 0 0 50px;">
-    <h1>main</h1>
+    <%# <h1>main</h1>
     <br>
     <form action="">
         speed
@@ -20,9 +19,59 @@
     <br>
 
     <% @articles.each do |articles| %>
-        <%= articles.speed %>
-    <% end %>
-    <br>
+        <%# <%= articles.speed %>
+    <%# <% end %>
+
+    <div id="app" class="container">
+        <button
+        v-if="startFlg!=true"
+        class="startButton mb-20"
+        @click="gameStart"
+        >
+        Click <br />
+        <span>or</span>
+        <div class="space">space</div>
+        </button>
+
+        <div v-if="countFlg">
+            <video class="video"  autoplay>
+                <source src="videos/countdown.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div v-if="startFlg && countFlg!=true" class="main">
+            <div class="bg">
+                <div class="gaugeWrapper mb-20">
+                <div v-bind:style="styleObject" class="gauge"></div>
+            </div>
+        </div>
+        <div class="front">
+            <article class="frontWrapper">
+                <section id="timer" class="timer">
+                    {{interval.toFixed(0)}}
+                    <p id="js-speed"></p>
+                </section>
+                <section class="type">
+                    <div class="question mb-20">{{current_question}}</div>
+                    <div
+                        v-if="current_question_counts >= question_counts"
+                        class="clear mb-20"
+                    >
+                        Clear
+                    </div>
+
+                    <div class="typeFormWrapper mb-20">
+                    <input
+                        id="typeForm"
+                        v-model="typeBox"
+                        type="text"
+                        class="typeForm"
+                    />
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>
+
 
     <input type="hidden" name="js_speeds_json" value= <%= @js_speeds_json %> id='js_speeds_json' >
-</div>

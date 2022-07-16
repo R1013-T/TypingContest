@@ -1,9 +1,137 @@
-body {
-  background: #77b1e7;
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-p {
-  background: #fff;
-  width: 100px;
-  height: 40px;
+body {
+  width: 100vw;
+  background: #000;
+  font-size: 32px;
+}
+body .mb-20 {
+  margin-bottom: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  width: auto;
+  height: 100vh;
+  text-align: center;
+}
+.container .video {
+  width: 100vw;
+  height: 100vh;
+}
+.container .startButton {
+  background: #000;
+  color: #a6a6a6;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.container .startButton span {
+  font-size: 0.7em;
+}
+.container .startButton .space {
+  background: #111;
+  width: 200px;
+  height: 55px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+.container .question {
+  color: #c9c8c8;
+}
+.container .clear {
+  color: #03a4f9;
+}
+.container .typeFormWrapper {
+  border-bottom: 1px solid #9a9a9a;
+  width: 100%;
+  margin: 0 auto;
+}
+.container .typeFormWrapper .typeForm {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #fff;
+  background: none;
+}
+.container .gaugeHeadline {
+  color: #fff;
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  transform: translate(-50%, 0);
+}
+.container .gaugeWrapper {
+  width: 100vw;
+  border: 1px solid;
+  height: 100vh;
+  position: absolute;
+}
+.container .gaugeWrapper .gauge {
+  height: 100vh;
+  transition: all 0.5s ease;
+}
+
+.main {
+  position: relative;
+  background: #3e3e3e;
+  width: 100vw;
+  height: 100vh;
+}
+.main .bg {
+  position: absolute;
+}
+.main .front {
+  position: absolute;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .front .frontWrapper {
+  background: lightblue;
+  width: 50vw;
+  position: relative;
+}
+.main .front .frontWrapper .timer {
+  background: #eee;
+  border-radius: 50%;
+  position: absolute;
+  font-weight: bold;
+  color: #222;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: -150px;
+  font-size: 30px;
+  line-height: 3;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 2px solid #fff;
+}
+.main .front .frontWrapper .type {
+  position: absolute;
+  background: rgba(17, 17, 17, 0.7);
+  border: 1px solid #333;
+  padding: 60px 10vw 40px;
+  border: 2px solid #8b8b8b;
+  border-radius: 7px;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#js-speed {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

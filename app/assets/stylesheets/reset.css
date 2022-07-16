@@ -39,7 +39,6 @@ input, button, textarea, select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *, *::before, *::after {
     -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
@@ -48,5 +47,4 @@ input, button, textarea, select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-/*# sourceMappingURL=reset.css.map *//*# sourceMappingURL=reset.css.map */
+} /*# sourceMappingURL=reset.css.map *//*# sourceMappingURL=reset.css.map */
