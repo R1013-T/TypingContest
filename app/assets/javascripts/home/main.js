@@ -120,9 +120,9 @@ new Vue({
 
     
     
-    // correct_audio: new Audio('/assets/correct.mp3'),
-    // true_audio: new Audio('/assets/true.mp3'),
-    // false_audio: new Audio('/assets/false.mp3'),
+    correct_audio: new Audio('audios/correct.mp3'),
+    true_audio: new Audio('audios/true.mp3'),
+    false_audio: new Audio('audios/false.mp3'),
   },
   computed: {
     styleObject: function () {
