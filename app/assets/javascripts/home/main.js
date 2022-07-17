@@ -188,7 +188,9 @@ new Vue({
     this.current_question = this.questions[0];
     this.question_counts = this.questions.length;
     this.current_until = this.current_question;
-
+    console.log(this.current_question);
+    console.log(this.current_until);
+    
     document.addEventListener("keydown", this.onKeyDown);
   },
   beforeDestroy: function () {
