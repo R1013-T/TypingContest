@@ -9,27 +9,9 @@ let untilSpeeds = [];
 let speed;
 let rank;
 
-// audiojs.events.ready(function() {
-//   var as = audiojs.createAll();
-// });
-
 //? Railsから持ってきた文字列を配列に変換
 //? return untilSpeeds
 formatOfRailsAry($speedsAryJson);
-
-// $nextButton.addEventListener("click", () => {
-//   rank = 1;
-//   speed = Number($speed.textContent);
-
-//   //? 今回のスピードを比べて順位を出す
-//   //? return rank
-//   searchRank();
-
-//   window.sessionStorage.setItem(["speed"], [speed]);
-//   window.sessionStorage.setItem(["rank"], [rank]);
-
-//   window.location.href = "result";
-// });
 
 function formatOfRailsAry(ary) {
   var index = 0;
@@ -40,7 +22,6 @@ function formatOfRailsAry(ary) {
 
   while (index <= length) {
     tmp = ary[index];
-    // console.log("tmp : " + tmp);
     //todo switch文でやりたい
     if (tmp == "[" || tmp == "]") {
       if (tmp == "]") {
@@ -203,8 +184,6 @@ new Vue({
         searchRank();
 
         window.location.href = "result";
-        // this.roll_audio.currentTime = 0;
-        // this.roll_audio.play();
       }
       if (e == this.current_question) {
         setTimeout(() => {
