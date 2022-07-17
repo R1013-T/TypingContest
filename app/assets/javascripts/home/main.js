@@ -82,7 +82,6 @@ new Vue({
       "confirm",
       "suspend",
       "validate",
-      "accuracy",
       "register",
       "separate",
       "identifier",
