@@ -53,12 +53,10 @@
           </p>
 
           <p class="field">
-          パスワード（確認） <br>
           <%= f.hidden_field :password_confirmation, value: "why" %>
           </p>
 
           <p class="field">
-          スコア <br>
           <%= f.number_field :speed, id: "js-score", :readonly => true %>
           </p>
           <%= f.submit "登録", class: "btn", id: "js-button" %>
