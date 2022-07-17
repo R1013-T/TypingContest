@@ -24,14 +24,14 @@ new Vue({
   },
   watch: {
     number: function (newValue) {
+      this.roll_audio.currentTime = 0;
+      this.roll_audio.play();
       gsap.to(this.$data, { duration: 3, tweenedNumber: newValue });
     },
   },
   mounted: function () {
     setTimeout(() => {
       this.number = rank;
-      this.roll_audio.currentTime = 0;
-      this.roll_audio.play();
     }, 0);
   },
 });
