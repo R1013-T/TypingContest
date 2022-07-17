@@ -62,7 +62,7 @@ function formatOfRailsAry(ary) {
 }
 
 function searchRank() {
-  let $time = document.getElementById('timer').textContent;
+  let $time = document.getElementById("timer").textContent;
   let crtSpeed = Number($time);
 
   let length = untilSpeeds.length;
@@ -74,7 +74,6 @@ function searchRank() {
     }
     index++;
   }
-
 
   window.sessionStorage.setItem(["speed"], [crtSpeed]);
   window.sessionStorage.setItem(["rank"], [rank]);
@@ -89,19 +88,19 @@ new Vue({
     questions: [
       "join",
       "load",
-      "host",
-      "from",
-      "fetch",
-      "build",
-      "export",
-      "accept",
-      "create",
-      "remove",
-      "dedupe",
-      "connect",
-      "register",
-      "separate",
-      "identifier",
+      // "host",
+      // "from",
+      // "fetch",
+      // "build",
+      // "export",
+      // "accept",
+      // "create",
+      // "remove",
+      // "dedupe",
+      // "connect",
+      // "register",
+      // "separate",
+      // "identifier",
     ],
     typeBox: "",
     current_question_counts: 0,
@@ -116,16 +115,16 @@ new Vue({
     keyCode: null,
 
     active: false,
-    start: 0, 
-    timer: 0, 
-    interval: 0, 
-    accum: 0, 
+    start: 0,
+    timer: 0,
+    interval: 0,
+    accum: 0,
 
-    
-    
-    correct_audio: new Audio('audios/correct.mp3'),
-    true_audio: new Audio('audios/true.mp3'),
-    false_audio: new Audio('audios/false.mp3'),
+    correct_audio: new Audio("audios/correct.mp3"),
+    true_audio: new Audio("audios/true.mp3"),
+    false_audio: new Audio("audios/false.mp3"),
+
+    roll_audio: new Audio("audios/roll.mp3"),
   },
   computed: {
     styleObject: function () {
@@ -153,7 +152,7 @@ new Vue({
             document.getElementById("typeForm").focus();
           });
 
-          console.log('start');
+          console.log("start");
           this.startTimer();
         }, 4000);
       }
@@ -163,7 +162,6 @@ new Vue({
         this.gameStart();
       } else if (event.keyCode == 8) {
         event.preventDefault();
-
       }
     },
     startTimer() {
@@ -188,7 +186,7 @@ new Vue({
     this.current_question = this.questions[0];
     this.question_counts = this.questions.length;
     this.current_until = this.current_question;
-    
+
     document.addEventListener("keydown", this.onKeyDown);
   },
   beforeDestroy: function () {
@@ -197,15 +195,16 @@ new Vue({
   watch: {
     typeBox: function (e) {
       if (this.current_question_counts >= this.question_counts) {
-        console.log('finish');
+        console.log("finish");
         this.stopTimer();
         rank = 1;
         //? 今回のスピードを比べて順位を出す
         //? return rank
         searchRank();
-      
-      
+
         window.location.href = "result";
+        this.roll_audio.currentTime = 0;
+        this.roll_audio.play();
       }
       if (e == this.current_question) {
         setTimeout(() => {
@@ -218,28 +217,30 @@ new Vue({
           this.current_index = 0;
           this.correct_audio.currentTime = 0;
           this.correct_audio.play();
-          console.log('next')
+          console.log("next");
         }, 150);
       } else if (e == " " || e == "　") {
         this.typeBox = "";
       } else {
         this.current_type = e.slice(-1);
 
-        if (this.current_type == this.current_question.substr(this.current_index,1)) {
-          console.log('true');
-          this.current_index ++;
-          this.current_settled += this.current_until.substr(0,1);
+        if (
+          this.current_type ==
+          this.current_question.substr(this.current_index, 1)
+        ) {
+          console.log("true");
+          this.current_index++;
+          this.current_settled += this.current_until.substr(0, 1);
           this.current_until = this.current_until.slice(1);
           this.true_audio.currentTime = 0;
           this.true_audio.play();
         } else if (!this.typeBox == "") {
-            console.log('false')
-            this.typeBox = e.substr(0,this.current_index);
-            this.false_audio.currentTime = 0;
-            this.false_audio.play();
+          console.log("false");
+          this.typeBox = e.substr(0, this.current_index);
+          this.false_audio.currentTime = 0;
+          this.false_audio.play();
         }
       }
-      
     },
   },
 });
