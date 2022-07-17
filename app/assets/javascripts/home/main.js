@@ -74,7 +74,6 @@ new Vue({
       "fetch",
       "build",
       "audio",
-      "recall",
       "export",
       "create",
       "remove",
@@ -82,7 +81,6 @@ new Vue({
       "dedupe",
       "confirm",
       "suspend",
-      "process",
       "validate",
       "accuracy",
       "register",
@@ -141,7 +139,7 @@ new Vue({
 
           console.log("start");
           this.startTimer();
-        }, 4200);
+        }, 4100);
       }
     },
     onKeyDown(event) {
