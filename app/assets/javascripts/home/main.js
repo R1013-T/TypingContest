@@ -80,14 +80,6 @@ function searchRank() {
   window.sessionStorage.setItem(["rank"], [rank]);
 }
 
-import correct from '/assets/correct.mp3';
-
-let correct_audio = new Audio(correct);
-
- // correct_audio: new Audio(require('/assets/correct.mp3')),
-    // true_audio: new Audio(require('/assets/true.mp3')),
-    // false_audio: new Audio(require('/assets/false.mp3')),
-
 new Vue({
   el: "#app",
   data: {
@@ -128,9 +120,9 @@ new Vue({
 
     
     
-    // correct_audio: new Audio(require('/assets/correct.mp3')),
-    // true_audio: new Audio(require('/assets/true.mp3')),
-    // false_audio: new Audio(require('/assets/false.mp3')),
+    correct_audio: new Audio(require('/assets/correct.mp3')),
+    true_audio: new Audio(require('/assets/true.mp3')),
+    false_audio: new Audio(require('/assets/false.mp3')),
   },
   computed: {
     styleObject: function () {
