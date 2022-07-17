@@ -118,9 +118,9 @@ new Vue({
     interval: 0, 
     accum: 0, 
 
-    correct_audio: new Audio('/assets/correct.mp3'),
-    true_audio: new Audio('/assets/true.mp3'),
-    false_audio: new Audio('/assets/false.mp3'),
+    correct_audio: new Audio(require('/assets/correct.mp3')),
+    true_audio: new Audio(require('/assets/true.mp3')),
+    false_audio: new Audio(require('/assets/false.mp3')),
   },
   computed: {
     styleObject: function () {
