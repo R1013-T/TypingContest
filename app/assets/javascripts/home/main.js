@@ -210,8 +210,8 @@ new Vue({
           this.typeBox = "";
           this.current_question_counts = this.current_question_counts + 1;
           this.current_index = 0;
-          // this.correct_audio.currentTime = 0;
-          // this.correct_audio.play();
+          this.correct_audio.currentTime = 0;
+          this.correct_audio.play();
           console.log('next')
         }, 150);
       } else if (e == " " || e == "　") {
