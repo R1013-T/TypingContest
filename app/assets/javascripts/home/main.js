@@ -107,6 +107,9 @@ new Vue({
     current_question_counts: 0,
     question_counts: 0,
 
+    current_settled: "",
+    current_until: "",
+
     current_type: "",
     current_index: 0,
 
