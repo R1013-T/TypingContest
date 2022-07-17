@@ -26,7 +26,9 @@ new Vue({
     number: function (newValue) {
       this.roll_audio.currentTime = 0;
       this.roll_audio.play();
+      setTimeout(() => {
         gsap.to(this.$data, { duration: 3, tweenedNumber: newValue });
+      }, 300);
     },
   },
   mounted: function () {
