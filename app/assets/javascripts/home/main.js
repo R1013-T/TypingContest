@@ -88,19 +88,19 @@ new Vue({
     questions: [
       "join",
       "load",
-      // "host",
-      // "from",
-      // "fetch",
-      // "build",
-      // "export",
-      // "accept",
-      // "create",
-      // "remove",
-      // "dedupe",
-      // "connect",
-      // "register",
-      // "separate",
-      // "identifier",
+      "host",
+      "from",
+      "fetch",
+      "build",
+      "export",
+      "accept",
+      "create",
+      "remove",
+      "dedupe",
+      "connect",
+      "register",
+      "separate",
+      "identifier",
     ],
     typeBox: "",
     current_question_counts: 0,
@@ -203,8 +203,8 @@ new Vue({
         searchRank();
 
         window.location.href = "result";
-        this.roll_audio.currentTime = 0;
-        this.roll_audio.play();
+        // this.roll_audio.currentTime = 0;
+        // this.roll_audio.play();
       }
       if (e == this.current_question) {
         setTimeout(() => {
