@@ -74,11 +74,9 @@ new Vue({
       "fetch",
       "build",
       "export",
-      "accept",
       "create",
       "remove",
       "dedupe",
-      "connect",
       "register",
       "separate",
       "identifier",
@@ -135,7 +133,7 @@ new Vue({
 
           console.log("start");
           this.startTimer();
-        }, 4000);
+        }, 4200);
       }
     },
     onKeyDown(event) {
