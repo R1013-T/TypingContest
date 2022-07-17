@@ -9,6 +9,10 @@ let untilSpeeds = [];
 let speed;
 let rank;
 
+// audiojs.events.ready(function() {
+//   var as = audiojs.createAll();
+// });
+
 //? Railsから持ってきた文字列を配列に変換
 //? return untilSpeeds
 formatOfRailsAry($speedsAryJson);
@@ -58,8 +62,10 @@ function formatOfRailsAry(ary) {
 }
 
 function searchRank() {
+  let $time = document.getElementById('timer').textContent;
+  let crtSpeed = Number($time);
+
   let length = untilSpeeds.length;
-  let crtSpeed = $speed.textContent;
   var index = 0;
 
   while (index < length) {
@@ -68,6 +74,10 @@ function searchRank() {
     }
     index++;
   }
+
+
+  window.sessionStorage.setItem(["speed"], [crtSpeed]);
+  window.sessionStorage.setItem(["rank"], [rank]);
 }
 
 new Vue({
@@ -97,19 +107,26 @@ new Vue({
     current_question_counts: 0,
     question_counts: 0,
 
+    current_type: "",
+    current_index: 0,
+
     keyCode: null,
 
-    active: false, // 実行状態
-    start: 0, // startを押した時刻
-    timer: 0, // setInterval()の格納用
-    interval: 0, // 計測時間
-    accum: 0, // 累積時間(stopしたとき用)
+    active: false,
+    start: 0, 
+    timer: 0, 
+    interval: 0, 
+    accum: 0, 
+
+    correct_audio: new Audio('/assets/correct.mp3'),
+    true_audio: new Audio('/assets/true.mp3'),
+    false_audio: new Audio('/assets/false.mp3'),
   },
   computed: {
     styleObject: function () {
       width = (this.current_question_counts / this.question_counts) * 100 + "%";
       if (this.current_question_counts >= this.question_counts) {
-        color = "#77b1e7";
+        color = "#03a4f9";
       } else {
         color = "#cdeeff";
       }
@@ -139,6 +156,9 @@ new Vue({
     onKeyDown(event) {
       if (event.keyCode == 32) {
         this.gameStart();
+      } else if (event.keyCode == 8) {
+        event.preventDefault();
+
       }
     },
     startTimer() {
@@ -149,7 +169,6 @@ new Vue({
       }, 10); // 10msごとに現在時刻とstartを押した時刻の差を足す
     },
     stopTimer() {
-      $speed.textContent = this.interval.toFixed(0);
       this.active = false;
       this.accum = this.interval;
       clearInterval(this.timer);
@@ -171,31 +190,46 @@ new Vue({
   },
   watch: {
     typeBox: function (e) {
+      if (this.current_question_counts >= this.question_counts) {
+        console.log('finish');
+        this.stopTimer();
+        rank = 1;
+        //? 今回のスピードを比べて順位を出す
+        //? return rank
+        searchRank();
+      
+      
+        window.location.href = "result";
+      }
       if (e == this.current_question) {
         setTimeout(() => {
           this.questions.splice(0, 1);
           this.current_question = this.questions[0];
           this.typeBox = "";
           this.current_question_counts = this.current_question_counts + 1;
+          this.current_index = 0;
+          this.correct_audio.currentTime = 0;
+          this.correct_audio.play();
+          console.log('next')
         }, 150);
       } else if (e == " " || e == "　") {
         this.typeBox = "";
+      } else {
+        this.current_type = e.slice(-1);
+
+        if (this.current_type == this.current_question.substr(this.current_index,1)) {
+          console.log('true');
+          this.current_index ++;
+          this.true_audio.currentTime = 0;
+          this.true_audio.play();
+        } else if (!this.typeBox == "") {
+            console.log('false')
+            this.typeBox = e.substr(0,this.current_index);
+            this.false_audio.currentTime = 0;
+            this.false_audio.play();
+        }
       }
-      if (this.current_question_counts >= this.question_counts) {
-        console.log('finish');
-        this.stopTimer();
-        rank = 1;
-        speed = Number($speed.textContent);
       
-        // //? 今回のスピードを比べて順位を出す
-        // //? return rank
-        searchRank();
-      
-        window.sessionStorage.setItem(["speed"], [speed]);
-        window.sessionStorage.setItem(["rank"], [rank]);
-      
-        window.location.href = "result";
-      }
     },
   },
 });

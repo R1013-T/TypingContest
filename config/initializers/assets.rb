@@ -28,3 +28,5 @@ Rails.application.config.assets.precompile += %w( user/signup.js )
 Rails.application.config.assets.precompile += %w( user/conf.js )
 Rails.application.config.assets.precompile += %w( user/login.js )
 Rails.application.config.assets.precompile += %w( user/session.js )
+
+Rails.application.config.assets.paths << Rails.root.join("app", "assets", "audios")
