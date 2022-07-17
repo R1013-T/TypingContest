@@ -130,6 +130,9 @@ body .mb-20 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.main .front .frontWrapper .type span {
+  color: #535353;
+}
 
 #js-speed {
   display: none;

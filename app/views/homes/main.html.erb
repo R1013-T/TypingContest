@@ -52,7 +52,9 @@
                     <p id="js-speed"></p>
                 </section>
                 <section class="type">
-                    <div class="question mb-20">{{current_question}}</div>
+                    <div class="question mb-20">
+                        <span>{{current_settled}}</span>{{current_until}}
+                    </div>
                     <div
                         v-if="current_question_counts >= question_counts"
                         class="clear mb-20"

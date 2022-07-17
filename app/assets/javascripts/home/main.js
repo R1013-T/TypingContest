@@ -205,8 +205,10 @@ new Vue({
       }
       if (e == this.current_question) {
         setTimeout(() => {
+          this.current_settled = "";
           this.questions.splice(0, 1);
           this.current_question = this.questions[0];
+          this.current_until = this.current_question;
           this.typeBox = "";
           this.current_question_counts = this.current_question_counts + 1;
           this.current_index = 0;
@@ -222,6 +224,8 @@ new Vue({
         if (this.current_type == this.current_question.substr(this.current_index,1)) {
           console.log('true');
           this.current_index ++;
+          this.current_settled += this.current_until.substr(0,1);
+          this.current_until = this.current_until.slice(1);
           this.true_audio.currentTime = 0;
           this.true_audio.play();
         } else if (!this.typeBox == "") {
