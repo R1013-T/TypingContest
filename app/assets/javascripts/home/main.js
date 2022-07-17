@@ -120,9 +120,9 @@ new Vue({
 
     
     
-    correct_audio: new Audio(require('/assets/correct.mp3')),
-    true_audio: new Audio(require('/assets/true.mp3')),
-    false_audio: new Audio(require('/assets/false.mp3')),
+    // correct_audio: new Audio(require('/assets/correct.mp3')),
+    // true_audio: new Audio(require('/assets/true.mp3')),
+    // false_audio: new Audio(require('/assets/false.mp3')),
   },
   computed: {
     styleObject: function () {
@@ -210,8 +210,8 @@ new Vue({
           this.typeBox = "";
           this.current_question_counts = this.current_question_counts + 1;
           this.current_index = 0;
-          this.correct_audio.currentTime = 0;
-          this.correct_audio.play();
+          // this.correct_audio.currentTime = 0;
+          // this.correct_audio.play();
           console.log('next')
         }, 150);
       } else if (e == " " || e == "　") {
@@ -222,13 +222,13 @@ new Vue({
         if (this.current_type == this.current_question.substr(this.current_index,1)) {
           console.log('true');
           this.current_index ++;
-          this.true_audio.currentTime = 0;
-          this.true_audio.play();
+          // this.true_audio.currentTime = 0;
+          // this.true_audio.play();
         } else if (!this.typeBox == "") {
             console.log('false')
             this.typeBox = e.substr(0,this.current_index);
-            this.false_audio.currentTime = 0;
-            this.false_audio.play();
+            // this.false_audio.currentTime = 0;
+            // this.false_audio.play();
         }
       }
       
