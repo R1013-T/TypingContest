@@ -222,13 +222,13 @@ new Vue({
         if (this.current_type == this.current_question.substr(this.current_index,1)) {
           console.log('true');
           this.current_index ++;
-          // this.true_audio.currentTime = 0;
-          // this.true_audio.play();
+          this.true_audio.currentTime = 0;
+          this.true_audio.play();
         } else if (!this.typeBox == "") {
             console.log('false')
             this.typeBox = e.substr(0,this.current_index);
-            // this.false_audio.currentTime = 0;
-            // this.false_audio.play();
+            this.false_audio.currentTime = 0;
+            this.false_audio.play();
         }
       }
       
