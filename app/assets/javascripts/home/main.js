@@ -131,7 +131,7 @@ new Vue({
     styleObject: function () {
       width = (this.current_question_counts / this.question_counts) * 100 + "%";
       if (this.current_question_counts >= this.question_counts) {
-        color = "#03a4f9";
+        color = "#77b1e7";
       } else {
         color = "#cdeeff";
       }
@@ -188,8 +188,6 @@ new Vue({
     this.current_question = this.questions[0];
     this.question_counts = this.questions.length;
     this.current_until = this.current_question;
-    console.log(this.current_question);
-    console.log(this.current_until);
     
     document.addEventListener("keydown", this.onKeyDown);
   },
