@@ -24,7 +24,7 @@ new Vue({
   },
   watch: {
     number: function (newValue) {
-      gsap.to(this.$data, { duration: 3.2, tweenedNumber: newValue });
+      gsap.to(this.$data, { duration: 3, tweenedNumber: newValue });
     },
   },
   mounted: function () {
