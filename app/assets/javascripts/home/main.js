@@ -187,6 +187,7 @@ new Vue({
   mounted: function () {
     this.current_question = this.questions[0];
     this.question_counts = this.questions.length;
+    this.current_until = this.current_question;
 
     document.addEventListener("keydown", this.onKeyDown);
   },
