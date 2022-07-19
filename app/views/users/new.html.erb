@@ -43,7 +43,7 @@
           </p>
 
           <p class="field">
-          メールアドレス <br>
+          メールアドレス / 電話番号 <br>
           <%= f.text_field :email %>
           </p>
 
@@ -54,8 +54,8 @@
           <p class="field">
           <%= f.hidden_field :password_confirmation, value: "why" %>
           </p>
-          スコア
           <p class="field">
+          スコア<br>
           <%= f.number_field :speed, id: "js-score", :readonly => true %>
           </p>
           <%= f.submit "登録", class: "btn", id: "js-button" %>
