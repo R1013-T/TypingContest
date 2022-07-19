@@ -194,4 +194,8 @@ canvas {
 
 .login:hover {
   text-decoration: underline;
+}
+
+.field span {
+  font-size: 8px;
 }/*# sourceMappingURL=signup.css.map */
