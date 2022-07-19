@@ -265,13 +265,13 @@
     text-align: center;
   }
   .rank_head .rank {
-    width: 10vw;
+    width: 20vw;
   }
   .rank_head .name {
-    width: 55vw;
+    width: 30vw;
   }
   .rank_head .score {
-    width: 15vw;
+    width: 20vw;
     text-align: left;
   }
   .rank_head .gift {
