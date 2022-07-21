@@ -290,63 +290,63 @@
         &:first-child {
           padding-top: 20px;
         }
-        .text {
-          display: flex;
-        }
       }
     }
   }
 
-  .rank_head {
-    position: fixed;
-    display: flex;
-    border-bottom: 1px solid #333;
-    background: rgba($color: #eee, $alpha: 0.9);
-    color: #222;
+  // .rank_head {
+  //   position: fixed;
+  //   display: flex;
+  //   border-bottom: 1px solid #333;
+  //   background: rgba($color: #eee, $alpha: 0.9);
+  //   color: #222;
 
-    div {
-      height: 20px;
-      font-size: 13px;
-      text-align: center;
-    }
+  //   div {
+  //     height: 20px;
+  //     font-size: 13px;
+  //     text-align: center;
+  //   }
 
-    .rank {
-      width: 20vw;
-    }
+  //   .rank {
+  //     width: 20vw;
+  //   }
 
-    .name {
-      width: 35vw;
-    }
+  //   .name {
+  //     width: 35vw;
+  //   }
 
-    .score {
-      width: 20vw;
-      text-align: left;
-    }
+  //   .score {
+  //     width: 20vw;
+  //     text-align: left;
+  //   }
 
-    .gift {
-      width: 25vw;
-      text-align: left;
-    }
-  }
+  //   .gift {
+  //     width: 25vw;
+  //     text-align: left;
+  //   }
+  // }
 
   .text {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 5px 0;
+
     .rank {
-      width: 10vw;
-      text-align: right;
+      width: 20vw;
+      // text-align: right;
     }
 
     .name {
-      width: 55vw;
-      text-align: center;
+      width: 60vw;
+      // text-align: center;
     }
 
     .score {
-      width: 15vw;
-      text-align: left;
-    }
-
-    .gift {
-      width: 25vw;
+      width: 20vw;
+      // text-align: left;
     }
   }
 }
+
+.container {}

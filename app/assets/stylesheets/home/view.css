@@ -249,48 +249,19 @@
   body article.ranking section.container:first-child {
     padding-top: 20px;
   }
-  body article.ranking section.container .text {
+  .text {
     display: flex;
-  }
-  .rank_head {
-    position: fixed;
-    display: flex;
-    border-bottom: 1px solid #333;
-    background: rgba(238, 238, 238, 0.9);
-    color: #222;
-  }
-  .rank_head div {
-    height: 20px;
-    font-size: 13px;
+    flex-wrap: wrap;
     text-align: center;
-  }
-  .rank_head .rank {
-    width: 20vw;
-  }
-  .rank_head .name {
-    width: 35vw;
-  }
-  .rank_head .score {
-    width: 20vw;
-    text-align: left;
-  }
-  .rank_head .gift {
-    width: 25vw;
-    text-align: left;
+    padding: 5px 0;
   }
   .text .rank {
-    width: 10vw;
-    text-align: right;
+    width: 20vw;
   }
   .text .name {
-    width: 55vw;
-    text-align: center;
+    width: 60vw;
   }
   .text .score {
-    width: 15vw;
-    text-align: left;
-  }
-  .text .gift {
-    width: 25vw;
+    width: 20vw;
   }
 }/*# sourceMappingURL=view.css.map */
