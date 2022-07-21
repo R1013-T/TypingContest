@@ -65,7 +65,7 @@ if (width <= 480) {
 
   while (index < rowLength) {
     if (index < 5) {
-      rows[index].style.padding = "20px 0";
+      rows[index].style.padding = "10px 0";
 
       for (let i = 0; i <= 3; i++) {
         rows[index].children[i].style.width = "100vw";
