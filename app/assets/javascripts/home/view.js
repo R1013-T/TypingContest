@@ -78,7 +78,7 @@ if (width <= 480) {
         rows[index].children[2].textContent + "s";
 
       rows[index].children[0].style.fontSize = "40px";
-      rows[index].children[1].style.fontSize = "30px";
+      rows[index].children[1].style.fontSize = "50px";
       rows[index].children[2].style.fontSize = "20px";
       rows[index].children[3].style.fontSize = "30px";
 
