@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Kosugi&family=Noto+Sans+JP&family=Rubik:wght@700&family=Sawarabi+Gothic&display=swap');
+
 @media screen and (min-width:480px) {
-  @import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Kosugi&family=Noto+Sans+JP&family=Rubik:wght@700&family=Sawarabi+Gothic&display=swap');
+
+  .header2 {
+    display: none;
+  }
 
   body {
     background: #77b1e7;
@@ -347,6 +352,20 @@
       // text-align: left;
     }
   }
-}
 
-.container {}
+  .header2 {
+    width: 100vw;
+    margin:10px 0 0 0;
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      span {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+}
