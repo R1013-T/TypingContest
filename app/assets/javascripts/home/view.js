@@ -67,6 +67,9 @@ while (index < rowLength) {
     rows[index].children[3].style.fontSize = "20px";
   }
 
+  index++;
+}
+if (index < 5) {
   rows[0].children[0].textContent = rows[0].children[0].textContent + "st";
   rows[1].children[0].textContent = rows[1].children[0].textContent + "nd";
   rows[2].children[0].textContent = rows[2].children[0].textContent + "rd";
@@ -78,6 +81,4 @@ while (index < rowLength) {
   rows[2].children[0].style.color = "#815a2b";
   rows[3].children[0].style.color = "#488c8a";
   rows[4].children[0].style.color = "#488c8a";
-
-  index++;
 }
