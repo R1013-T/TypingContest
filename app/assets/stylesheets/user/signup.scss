@@ -1,10 +1,13 @@
 @charset "UTF-8";
+
 body {
   background: #77b1e7;
 }
+
 body header {
   color: black;
 }
+
 body header .headerTitle {
   color: rgb(255, 255, 255);
   display: flex;
@@ -14,30 +17,37 @@ body header .headerTitle {
   font-family: "Teko", sans-serif;
   margin: 10px 0 0 100px;
 }
+
 body header .headerTitle .container {
   text-align: right;
 }
+
 body header .headerTitle .container h2 {
   font-size: 110px;
   color: #333;
   margin: 0 15px 0 0;
 }
+
 body header .headerTitle .container h2 span {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 90px;
 }
+
 body header .headerTitle .container h3 {
   color: #fdfa8e;
   font-size: 40px;
   margin: 30px 0 0 0;
 }
+
 body header .headerTitle .container p {
   font-size: 60px;
   margin: -38px 0 0 0;
 }
+
 body header .headerTitle .container p span {
   color: #fdfa8e;
 }
+
 body .form {
   background: rgba(255, 255, 255, 0.4);
   width: 50%;
@@ -49,14 +59,17 @@ body .form {
   border-radius: 10px;
   margin: 200px auto;
 }
+
 body .form p {
   margin: 7% auto;
   color: #333;
   font-size: 20px;
 }
+
 body .form p:first-child {
   margin: 60px 0 0 0;
 }
+
 body .form p input {
   display: inline-block;
   width: 60%;
@@ -153,7 +166,9 @@ canvas {
   margin: 30px 0 0 0;
   font-size: 40px;
   color: #333;
-}/*# sourceMappingURL=sign_up_form.css.map */
+}
+
+/*# sourceMappingURL=sign_up_form.css.map */
 
 .btn span {
   position: relative;
@@ -174,7 +189,7 @@ canvas {
   line-height: 35px;
 }
 
-.login{
+.login {
   display: block;
   margin: 20px;
   color: #000000;
@@ -190,4 +205,10 @@ canvas {
     font-size: 12px;
     text-align: left;
   }
+}
+
+img {
+  width: 20%;
+  margin: -55px auto -20px;
+
 }
