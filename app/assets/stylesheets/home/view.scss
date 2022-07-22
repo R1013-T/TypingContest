@@ -235,7 +235,7 @@
   }
 
   body .ranking .text .name {
-    width: 30%;
+    width: 25%;
     font-family: 'BIZ UDGothic', sans-serif;
     margin: 0 0 0 20%;
   }
@@ -244,10 +244,16 @@
     width: 5%;
     font-size: 1.2em;
     margin: -5px 0 0 15%;
+    &:after {
+      content: 's';
+      font-size: 0.8em;
+    }
   }
 
   body .ranking .text .gift {
+    font-size: 0.8em;
     margin: 0 0 0 5%;
+    line-height: 2;
   }
 
   body .ranking .rank_head {
@@ -339,6 +345,7 @@
 
     .rank {
       width: 20vw;
+      
       // text-align: right;
     }
 
@@ -349,6 +356,8 @@
 
     .score {
       width: 20vw;
+
+      
       // text-align: left;
     }
   }
@@ -368,4 +377,18 @@
     }
   }
 
+}
+
+.scoreAfter{
+  &:after {
+    content: 's';
+    font-size: 0.8em;
+  }
+}
+
+.rankAfter {
+  &:after {
+    content: 'th';
+    font-size: 0.8em;
+  }
 }

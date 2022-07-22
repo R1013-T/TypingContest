@@ -24,16 +24,16 @@ while (index < userlength) {
       gift = "gift1";
       break;
     case 1:
-      gift = "Amazonギフトカード 2,000円分";
+      gift = "Amazonギフトカード 1,500円分";
       break;
     case 2:
-      gift = "ヘッドフォン";
+      gift = "ELECOM ヘッドフォン";
       break;
     case 3:
-      gift = "SDカード 32GB";
+      gift = "ELECOM USBメモリ 32GB";
       break;
     case 4:
-      gift = "SDカード 16GB";
+      gift = "ELECOM USBメモリ 16GB";
       break;
     default:
       gift = "";
@@ -65,17 +65,15 @@ if (width <= 480) {
 
   while (index < rowLength) {
     if (index < 5) {
-      rows[index].style.padding = "10px 0";
+      rows[index].style.padding = "5px 0 0 0";
+      rows[index].style.margin = "0 0 20px 0";
 
       for (let i = 0; i <= 3; i++) {
         rows[index].children[i].style.width = "100vw";
-        rows[index].children[i].style.padding = "5px 0";
-
+        rows[index].children[i].style.padding = "1px 0";
       }
 
-      rows[index].children[0].style.padding = "10px 0";
-      rows[index].children[2].textContent =
-        rows[index].children[2].textContent + "s";
+      rows[index].children[0].style.padding = "0";
 
       rows[index].children[0].style.fontSize = "40px";
       rows[index].children[1].style.fontSize = "50px";
@@ -90,5 +88,13 @@ if (width <= 480) {
     index++;
   }
 
-
+  for (index = 0; rowLength > index; index++) {
+    if (index <= 4) {
+      rows[index].children[3].classList.add("scoreAfter");
+    } else {
+      rows[index].children[2].classList.add("scoreAfter");
+      rows[index].children[0].classList.add("rankAfter");
+      
+    }
+  }
 }

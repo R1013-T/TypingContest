@@ -200,7 +200,7 @@
     margin: -10px 0 0 4%;
   }
   body .ranking .text .name {
-    width: 30%;
+    width: 25%;
     font-family: "BIZ UDGothic", sans-serif;
     margin: 0 0 0 20%;
   }
@@ -209,8 +209,14 @@
     font-size: 1.2em;
     margin: -5px 0 0 15%;
   }
+  body .ranking .text .score:after {
+    content: "s";
+    font-size: 0.8em;
+  }
   body .ranking .text .gift {
+    font-size: 0.8em;
     margin: 0 0 0 5%;
+    line-height: 2;
   }
   body .ranking .rank_head {
     display: flex;
@@ -280,4 +286,13 @@
   .header2 p span {
     font-size: 1.3em;
   }
+}
+.scoreAfter:after {
+  content: "s";
+  font-size: 0.8em;
+}
+
+.rankAfter:after {
+  content: "th";
+  font-size: 0.8em;
 }/*# sourceMappingURL=view.css.map */
