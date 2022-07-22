@@ -24,16 +24,16 @@ while (index < userlength) {
       gift = "gift1";
       break;
     case 1:
-      gift = "gift2";
+      gift = "Amazonギフトカード 2,000円分";
       break;
     case 2:
-      gift = "gift3";
+      gift = "ヘッドフォン";
       break;
     case 3:
-      gift = "gift4";
+      gift = "SDカード 32GB";
       break;
     case 4:
-      gift = "gift5";
+      gift = "SDカード 16GB";
       break;
     default:
       gift = "";
