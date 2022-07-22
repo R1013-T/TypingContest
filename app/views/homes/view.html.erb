@@ -55,28 +55,24 @@
   </div> %>
 
   <div id="js-container">
-  
-  <% @articles.each do |articles| %>
-
-  <section class="container">
-    <div class="back">
-      <div class="back-color"></div>
-      <div class="back-black"></div>
-      <div class="text">
-        <div class="rank">4</div>
-        <div class="name"><%= articles.name %></div>
-        <div class="score"><%= articles.speed %></div>
-        <div class="gift"></div>
-      </div>
-    </div>
-  </section>
-<% end %>
-
+    <% @articles.each do |articles| %>
+      <section class="container">
+        <div class="back">
+          <div class="back-color"></div>
+          <div class="back-black"></div>
+          <div class="text">
+            <div class="rank">4</div>
+            <div class="name"><%= articles.name %></div>
+            <div class="score"><%= articles.speed %></div>
+            <div class="gift"></div>
+          </div>
+        </div>
+      </section>
+    <% end %>
   </div>
 
   <div class="desc">
     ※ 同じスコアの場合はより遅くプレイされた方が高い順位になります。
   </div>
-
 
 </article>
