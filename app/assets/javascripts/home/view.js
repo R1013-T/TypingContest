@@ -2,7 +2,7 @@ console.log("view:allview");
 
 setTimeout(function () {
   location.reload();
-}, 2000);
+}, 60000);
 
 let $container = document.getElementById("js-container");
 let $ranklabel = $container.children[0].children[0].children[2].children[0];
@@ -102,3 +102,9 @@ if (width <= 480) {
     }
   }
 }
+
+let $form = document.getElementById('form');
+
+$form.addEventListener('click', function() {
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSeNpS6vEN2YipWKC2ziN7giJVGI1MCFt1ryStH43Fot4HV1kg/viewform', '_blank');
+})

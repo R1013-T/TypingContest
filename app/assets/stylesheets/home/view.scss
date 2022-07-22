@@ -6,6 +6,10 @@
     display: none;
   }
 
+  .form {
+    display: none;
+  }
+
   body {
     background: #77b1e7;
     width: 100%;
@@ -244,6 +248,7 @@
     width: 5%;
     font-size: 1.2em;
     margin: -5px 0 0 15%;
+
     &:after {
       content: 's';
       font-size: 0.8em;
@@ -296,8 +301,10 @@
 
     article.ranking {
       padding: 0 0 20px 0;
+
       section.container {
         padding-top: 10px;
+
         &:first-child {
           padding-top: 20px;
         }
@@ -345,7 +352,7 @@
 
     .rank {
       width: 20vw;
-      
+
       // text-align: right;
     }
 
@@ -357,20 +364,22 @@
     .score {
       width: 20vw;
 
-      
+
       // text-align: left;
     }
   }
 
   .header2 {
     width: 100vw;
-    margin:10px 0 0 0;
+    margin: 10px 0 0 0;
+
     h1 {
       text-align: center;
     }
 
     p {
       text-align: center;
+
       span {
         font-size: 1.3em;
       }
@@ -379,7 +388,7 @@
 
 }
 
-.scoreAfter{
+.scoreAfter {
   &:after {
     content: 's';
     font-size: 0.8em;
@@ -390,5 +399,18 @@
   &:after {
     content: 'th';
     font-size: 0.8em;
+  }
+
+}
+
+.form {
+  position: fixed;
+  top: 85%;
+  left: 80%;
+
+  img {
+
+    width: 15vw;
+    border-radius: 50%;
   }
 }

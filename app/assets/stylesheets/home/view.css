@@ -3,6 +3,9 @@
   .header2 {
     display: none;
   }
+  .form {
+    display: none;
+  }
   body {
     background: #77b1e7;
     width: 100%;
@@ -295,4 +298,14 @@
 .rankAfter:after {
   content: "th";
   font-size: 0.8em;
+}
+
+.form {
+  position: fixed;
+  top: 85%;
+  left: 80%;
+}
+.form img {
+  width: 15vw;
+  border-radius: 50%;
 }/*# sourceMappingURL=view.css.map */

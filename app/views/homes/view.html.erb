@@ -1,5 +1,5 @@
 <% content_for :title do %>
-    タイピング大会
+    ランキング | タイピング大会
 <% end %>
 <% content_for :meta do %>
   <meta http-equiv="refresh" content="10; URL=https://schoolaniversary2022.herokuapp.com/view">
@@ -42,6 +42,10 @@
   <p><span>403</span>教室で開催中！</p>
 </div>
 
+<div class="form">
+  <%= image_tag 'message.gif', alt: 'message', id: 'form' %>  
+</div>
+
 <article class="ranking">
   <%# <div class="rank_head">
     <div class="rank">ランク</div>
@@ -70,9 +74,7 @@
 
   </div>
 
-<div class="form">
-form
-</div>
+
 
 
 </article>
