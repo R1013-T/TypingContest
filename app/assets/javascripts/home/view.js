@@ -123,7 +123,12 @@ if (width > 480) {
 }
 
 let $form = document.getElementById('form');
+let $code = document.getElementById('code');
 
 $form.addEventListener('click', function() {
   window.open('https://docs.google.com/forms/d/e/1FAIpQLSeNpS6vEN2YipWKC2ziN7giJVGI1MCFt1ryStH43Fot4HV1kg/viewform', '_blank');
+})
+
+$code.addEventListener('click', function() {
+  window.open('https://github.com/R1013-T/2022-ShcoolAniversary', '_blank');
 })

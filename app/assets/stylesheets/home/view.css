@@ -3,7 +3,7 @@
   .header2 {
     display: none;
   }
-  .form {
+  .shere {
     display: none;
   }
   body {
@@ -266,12 +266,14 @@
     flex-wrap: wrap;
     text-align: center;
     padding: 5px 0;
+    width: 100vw;
+    text-align: center;
   }
   .text .rank {
     width: 20vw;
   }
   .text .name {
-    width: 50vw;
+    width: 60vw;
   }
   .text .score {
     width: 20vw;
@@ -315,12 +317,13 @@
   font-size: 0.8em;
 }
 
-.form {
+.shere {
   position: fixed;
-  top: 87%;
+  top: 75%;
   left: 80%;
 }
-.form img {
+.shere img {
+  margin: 15px 0;
   width: 17vw;
   border-radius: 50%;
 }

@@ -6,7 +6,7 @@
     display: none;
   }
 
-  .form {
+  .shere {
     display: none;
   }
 
@@ -312,43 +312,13 @@
     }
   }
 
-  // .rank_head {
-  //   position: fixed;
-  //   display: flex;
-  //   border-bottom: 1px solid #333;
-  //   background: rgba($color: #eee, $alpha: 0.9);
-  //   color: #222;
-
-  //   div {
-  //     height: 20px;
-  //     font-size: 13px;
-  //     text-align: center;
-  //   }
-
-  //   .rank {
-  //     width: 20vw;
-  //   }
-
-  //   .name {
-  //     width: 35vw;
-  //   }
-
-  //   .score {
-  //     width: 20vw;
-  //     text-align: left;
-  //   }
-
-  //   .gift {
-  //     width: 25vw;
-  //     text-align: left;
-  //   }
-  // }
-
   .text {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     padding: 5px 0;
+    width: 100vw;
+    text-align: center;
 
     .rank {
       width: 20vw;
@@ -357,7 +327,7 @@
     }
 
     .name {
-      width: 50vw;
+      width: 60vw;
       // text-align: center;
     }
 
@@ -423,17 +393,18 @@
 
 }
 
-.form {
+.shere {
   position: fixed;
-  top: 87%;
+  top: 75%;
   left: 80%;
 
   img {
-
+    margin: 15px 0;
     width: 17vw;
     border-radius: 50%;
   }
 }
+
 .desc {
   padding: 10px 0;
   text-align: center;
