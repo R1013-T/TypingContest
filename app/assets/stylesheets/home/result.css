@@ -213,4 +213,10 @@ body .wrapper .back .btn04 {
 body .wrapper .back .btn04:hover {
   border: 2px solid #333;
   background: rgba(81, 111, 154, 0.4);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    display: none;
+  }
 }/*# sourceMappingURL=result.css.map */

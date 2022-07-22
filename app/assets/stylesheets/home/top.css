@@ -311,4 +311,10 @@ body main .top .center .title .center_logo a:hover {
   color: #0080ff;
   background-color: #fff;
   border-color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    display: none;
+  }
 }/*# sourceMappingURL=top.css.map */
