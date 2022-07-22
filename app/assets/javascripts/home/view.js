@@ -1,5 +1,9 @@
 console.log("view:allview");
 
+setTimeout(function () {
+  location.reload();
+}, 2000);
+
 let $container = document.getElementById("js-container");
 let $ranklabel = $container.children[0].children[0].children[2].children[0];
 let userlength = $container.childElementCount;
