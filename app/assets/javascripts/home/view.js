@@ -103,6 +103,25 @@ if (width <= 480) {
   }
 }
 
+if (width > 480) {
+  for (index = 0; rowLength > index; index++) {
+    switch (index) {
+      case 0:
+        rows[index].children[0].classList.add("firstRankAfter");
+        break
+        case 1:
+        rows[index].children[0].classList.add("secondRankAfter");
+        break
+        case 2:
+        rows[index].children[0].classList.add("thirdRankAfter");
+        break        
+      default :
+      rows[index].children[0].classList.add("rankAfter");
+
+    }
+  }
+}
+
 let $form = document.getElementById('form');
 
 $form.addEventListener('click', function() {

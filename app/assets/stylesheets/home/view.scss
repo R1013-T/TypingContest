@@ -395,6 +395,26 @@
   }
 }
 
+.firstRankAfter {
+  &:after {
+    content: 'st';
+    font-size: 0.8em;
+  }
+
+}
+.secondRankAfter {
+  &:after {
+    content: 'nd';
+    font-size: 0.8em;
+  }
+}
+.thirdRankAfter {
+  &:after {
+    content: 'rd';
+    font-size: 0.8em;
+  }
+
+}
 .rankAfter {
   &:after {
     content: 'th';
@@ -405,7 +425,7 @@
 
 .form {
   position: fixed;
-  top: 85%;
+  top: 87%;
   left: 80%;
 
   img {
@@ -413,4 +433,9 @@
     width: 15vw;
     border-radius: 50%;
   }
+}
+.desc {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 8px;
 }
