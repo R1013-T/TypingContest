@@ -156,3 +156,8 @@ body {
 #js-speed {
   display: none;
 }
+@media screen and (max-width:480px) {
+  body {
+    display: none;
+  }
+}

@@ -136,4 +136,10 @@ body .mb-20 {
 
 #js-speed {
   display: none;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
