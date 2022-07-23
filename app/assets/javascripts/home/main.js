@@ -9,6 +9,10 @@ let untilSpeeds = [];
 let speed;
 let rank;
 
+setTimeout(() => {
+    document.getElementById("typeForm").focus();
+},1);
+
 //? Railsから持ってきた文字列を配列に変換
 //? return untilSpeeds
 formatOfRailsAry($speedsAryJson);
