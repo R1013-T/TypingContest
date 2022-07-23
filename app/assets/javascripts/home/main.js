@@ -9,9 +9,10 @@ let untilSpeeds = [];
 let speed;
 let rank;
 
-setTimeout(() => {
-    document.getElementById("typeForm").focus();
-},1);
+document.body.onclick = function () {
+  document.getElementById("typeForm").focus();
+
+}
 
 //? Railsから持ってきた文字列を配列に変換
 //? return untilSpeeds
