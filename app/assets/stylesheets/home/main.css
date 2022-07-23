@@ -9,6 +9,7 @@ body {
   width: 100vw;
   background: #000;
   font-size: 32px;
+  cursor: none;
 }
 body .mb-20 {
   margin-bottom: 20px;
