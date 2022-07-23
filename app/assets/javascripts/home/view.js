@@ -25,7 +25,7 @@ while (index < userlength) {
   let gift;
   switch (index) {
     case 0:
-      gift = "???";
+      gift = "Logicool マウス G304";
       break;
     case 1:
       gift = "Amazonギフトカード 1,500円分";
